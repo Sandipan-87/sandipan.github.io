@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function resetTimer() {
             clearInterval(autoSlideTimer);
-            autoSlideTimer = setInterval(advanceSlide, 5000);
+            autoSlideTimer = setInterval(advanceSlide, 2000);
         }
 
         prevBtn.addEventListener('click', () => {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         showSlide(slideIndex);
-        autoSlideTimer = setInterval(advanceSlide, 5000);
+        autoSlideTimer = setInterval(advanceSlide, 2000);
     });
 
         
