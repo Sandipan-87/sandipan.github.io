@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff;
+    color: #222;
+    transition: background 0.2s, color 0.2s;
+}
+a {
+    text-decoration: none;
+    color: #5a5a5a;
+}
+img {
+    cursor: pointer;
+}
+.flex-div {
+    display: flex;
+    align-items: center;
+}
+
+/* Remove white border or outline around active sidebar link */
+.sidebar-link.active, .sidebar-link:focus, .sidebar-link:hover {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-bottom: 2px solid transparent !important;
+}
+
+/* Remove all borders and backgrounds in dark mode */
+body[data-theme="dark"], 
+body[data-theme="dark"] * {
+    background: #181818 !important;
+    color: #fff !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Make the Watch Later link white in dark mode */
+body[data-theme="dark"] .sidebar-link {
+    color: #fff !important;
+}
+
+/* Make video titles white in dark mode */
+body[data-theme="dark"] .card h2, 
+body[data-theme="dark"] .video-card h2 {
+    color: #fff !important;
+}
+
+/* Make other card text lighter in dark mode */
+body[data-theme="dark"] .card h3, 
+body[data-theme="dark"] .video-card h3, 
+body[data-theme="dark"] .card p, 
+body[data-theme="dark"] .video-card p {
+    color: #ccc !important;
+}
+
+/* Make search box and input dark */
+body[data-theme="dark"] .search-box,
+body[data-theme="dark"] input[type="text"] {
+    background: #222 !important;
+    color: #fff !important;
+    border: 1px solid #333 !important;
+}
+
+/* Remove default body margin/padding that can cause white lines */
+body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: inherit;
+}
+
+/* Remove possible white gap between sidebar and content */
+body[data-theme="dark"] .sidebar {
+    border-right: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove possible white gap on main content */
+body[data-theme="dark"] .main-content,
+body[data-theme="dark"] .feed {
+    border-left: none !important;
+    box-shadow: none !important;
+}
