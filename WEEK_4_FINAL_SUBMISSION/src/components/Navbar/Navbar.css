@@ -1,0 +1,119 @@
+nav{
+    padding: 10px 2%;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.nav-left .menu-icon{
+    width: 22px;
+    margin-right: 25px;
+}
+.nav-left .logo{
+    width: 130px;
+}
+.nav-middle .search-box{
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    padding: 8px 12px;
+    border-radius: 25px;
+}
+.nav-middle .search-box input{
+    width: 400px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+.nav-middle .search-box img{
+    width: 15px;
+}
+.nav-right img{
+    width: 25px;
+    margin-right: 25px;
+}
+.nav-right .user-icon{
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 40px;
+}
+.theme-toggle-btn {
+  margin-right: 12px;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 20px;
+  background: var(--toggle-bg, #eee);
+  color: var(--toggle-color, #222);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  outline: none;
+}
+.theme-toggle-btn:hover {
+  background: var(--toggle-hover-bg, #ccc);
+}
+
+body[data-theme="light"] {
+  --bg-color: #fff;
+  --text-color: #222;
+  --card-bg: #f9f9f9;
+}
+
+body[data-theme="dark"] {
+  --bg-color: #181818;
+  --text-color: #f1f1f1;
+  --card-bg: #232323;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.sidebar, .card, .navbar {
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+
+.theme-toggle-btn {
+    background: #e0e0e0;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+.logout-button {
+    background: #ff0000;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+@media(max-width:900px){
+      .menu-icon{
+        display: none;
+      }
+      .nav-right img{
+        display: none;
+      }
+
+      .nav-right .user-icon{
+        display: block;
+        width: 30px;
+      }
+      .logo{
+        width: 90px;
+      }
+      .nav-middle .search-box input{
+        width: 100px;
+      }
+}
+

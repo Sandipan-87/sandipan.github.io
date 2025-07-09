@@ -1,0 +1,96 @@
+/* --- Base Styles for the Search Box Container --- */
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 25px; /* Creates the pill shape */
+  padding-left: 15px;
+  background: #fff;
+  width: 100%;
+  max-width: 600px; /* Prevents it from getting too wide on large screens */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Styles for the Input Field --- */
+.search-box input {
+  flex-grow: 1; /* Allows the input to take up all available space */
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: #111;
+  padding: 10px 0;
+}
+
+.search-box input::placeholder {
+  color: #606060;
+}
+
+/* --- Styles for the Search Button --- */
+.search-box .search-btn {
+  background: #f8f8f8;
+  border: none;
+  border-left: 1px solid #ccc; /* Separator line */
+  border-radius: 0 25px 25px 0; /* Rounds the right corners */
+  padding: 0 25px;
+  height: 40px; /* Matches the typical height of the navbar */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.search-box .search-btn:hover {
+  background: #f0f0f0;
+}
+
+/* --- Styles for the Search Icon --- */
+.search-box .search-btn img {
+  width: 20px;
+}
+
+/* --- Focus State: Highlights the bar when the user clicks inside --- */
+.search-box:focus-within {
+  border-color: #1c62b9;
+  box-shadow: 0 0 5px rgba(28, 98, 185, 0.3);
+}
+
+/*
+=========================================
+          DARK THEME STYLES
+=========================================
+*/
+
+/* Assumes you have a 'dark-theme' class on the <body> or a parent container */
+.dark-theme .search-box {
+  background: #121212; /* Dark background for the search bar */
+  border-color: #3d3d3d; /* Darker border */
+}
+
+.dark-theme .search-box input {
+  color: #f1f1f1; /* Light text color for input */
+}
+
+.dark-theme .search-box input::placeholder {
+  color: #aaa; /* Lighter placeholder text */
+}
+
+.dark-theme .search-box .search-btn {
+  background: #222222; /* Dark background for the button */
+  border-left: 1px solid #3d3d3d; /* Darker separator */
+}
+
+.dark-theme .search-box .search-btn:hover {
+  background: #333333; /* Slightly lighter hover for the button */
+}
+
+/* In dark mode, the search icon might need to be inverted if it's dark */
+.dark-theme .search-box .search-btn img {
+  filter: invert(1);
+}
+
+.dark-theme .search-box:focus-within {
+  border-color: #3ea6ff; /* A brighter blue for focus in dark mode */
+  box-shadow: 0 0 5px rgba(62, 166, 255, 0.3);
+}

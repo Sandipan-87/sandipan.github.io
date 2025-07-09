@@ -1,0 +1,82 @@
+/* src/index.css */
+
+/* === YOUR ORIGINAL GLOBAL STYLES (PRESERVED) === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f9f9f9; /* Default light mode background */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+    cursor: pointer;
+}
+
+.flex-div {
+    display: flex;
+    align-items: center;
+}
+
+
+.dark body {
+  background: #181818;
+  color: #fff;
+}
+
+/* --- Navbar --- */
+.dark nav {
+  background: #212121;
+  border-bottom: 1px solid #3a3a3a;
+}
+.dark .nav-middle .search-box input {
+  color: #fff;
+  background: #121212;
+  border: 1px solid #3a3a3a;
+}
+
+/* --- Sidebar Fixes --- */
+.dark .sidebar {
+  background: #212121;
+}
+.dark .sidebar .shortcut-links img {
+  /* This filter inverts the color of the black icons to make them white */
+  filter: invert(100%);
+}
+.dark .sidebar .shortcut-links a.active,
+.dark .sidebar .shortcut-links a:hover {
+  background: #3a3a3a;
+}
+.dark .sidebar hr {
+  border-color: #3a3a3a;
+}
+
+/* THIS IS THE KEY FIX FOR ALL SIDEBAR TEXT */
+.dark .sidebar .shortcut-links p,
+.dark .sidebar .subscribed-list h3,
+.dark .sidebar .subscribed-list p {
+    color: #fff;
+}
+
+/* --- Feed / Main Content --- */
+.dark .feed {
+  background-color: #181818;
+}
+.dark .feed .card h2,
+.dark .feed .card h3,
+.dark .feed .card p {
+  color: #fff;
+}
+
+.dark .nav-right span {
+    color: #fff;
+}
+
