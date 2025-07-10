@@ -2,6 +2,6 @@
 
 ## Project Structure
 
--   `accounts = backend/`: Backend service for user account management ).
--   `youtube_auth = api/`: API service for handling YouTube Data API authentication and integration.
--   `src= frontend/`: All frontend code, built with React ).
+-   `accounts = api/`: API service for handling YouTube Data API authentication and integration with the help of google api.
+-   `youtube_auth = backend/`: Backend service for user account management using django. 
+-   `src= frontend/`: All frontend code, built with React.
